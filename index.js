@@ -56,7 +56,7 @@ client.on('ready', () => {
         let extraNonce = crypto.randomBytes(2).toString('hex')
         
         while (extraNonces.has(extraNonce)) {
-                extraNonce = require('crypto').randomBytes(2).toString('hex')
+                extraNonce = crypto.randomBytes(2).toString('hex')
         }
 
         peer.sendInteraction(new interactions.setExtranonce(extraNonce))
